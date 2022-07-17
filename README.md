@@ -10,17 +10,12 @@ desired data. React and Flask are containerized and managed with
 
 ### Why Create React App?
 [Create React App](https://facebook.github.io/create-react-app/) allows 
-us to very easily *create a React app* with no build configuration. React is 
-currently one of the most popular front-end Javascript libraries for 
-building UIs.
+us to very easily *create a React app* with no build configuration. 
 
 ### Why Flask?
-Flask is a lightweight, highly-customizable micro-framework for Python. It let's
-us build really simple web applications quickly ([the "hello world" app is literally 5 
-lines of code](http://flask.pocoo.org/docs/1.0/quickstart/#a-minimal-application)).
-Flask doesn't come built-in with much, and if you're looking to integrate a more 
-robust back-end framework with React (say, Ruby on Rails), I'd recommend checking
-out [this blog post](https://medium.com/superhighfives/a-top-shelf-web-stack-rails-5-api-activeadmin-create-react-app-de5481b7ec0b).
+Flask is a lightweight, highly-customizable micro-framework for Python. 
+   (http://flask.pocoo.org/docs/1.0/quickstart/#a-minimal-application)).
+.
 
 ### Why Docker Compose?
 [Docker](https://www.docker.com/) maintains software and all of its dependencies within a "container",
@@ -28,12 +23,6 @@ which can make collaborating and deploying simpler. [Docker Compose](https://doc
 is a tool for easily managing applications running multiple Docker containers. 
 
 ## How to Use
-Firstly, download [Docker desktop](https://www.docker.com/products/docker-desktop) and follow its
- instructions to install it. This allows us to start using Docker containers.
- 
-Create a local copy of this repository and run
-
-    docker-compose build
     
 This spins up Compose and builds a local development environment according to 
 our specifications in [docker-compose.yml](docker-compose.yml). Keep in mind that 
@@ -41,7 +30,7 @@ this file contains settings for *development*, and not *production*.
 
 After the containers have been built (this may take a few minutes), run
 
-    docker-compose up
+    docker-compose up --build
     
 This one command boots up a local server for Flask (on port 5000)
 and React (on port 3000). Head over to
@@ -66,11 +55,6 @@ Finally, to gracefully stop running our local servers, you can run
     docker-compose down
 
 in a separate terminal window or press __control + C__.
-
-
-## Future plans
-* Add boilerplate for running tests locally and through continuous integration.
-* Add boilerplate for configuring production-ready settings and deployment.
 
 
 ## License
